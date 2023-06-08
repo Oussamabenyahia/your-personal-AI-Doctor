@@ -1,0 +1,39 @@
+body {
+    font-family: cursive;
+    font-size: larger;
+    background-color: rgb(181, 250, 181);
+}
+
+h1 {
+    text-align: center;
+}
+
+#intro{
+    font-size: x-large;
+    font-weight: bold;
+}
+
+
+fieldset {
+    margin-left: 24%;
+    margin-right: 26%;
+    padding: revert;
+    margin-top: 0px;
+    border: solid 5px;
+    font-size: xx-large;
+}
+
+legend {
+    font-weight: bold;
+}
+
+.fieldintofield {
+    margin: auto;
+}
+.radio{
+    font-size: 25px;
+}
+#name{
+    text-align: right;
+    color: rgb(118, 5, 5);
+}
