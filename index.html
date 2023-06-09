@@ -19,24 +19,24 @@
   <hr>
   <form >
   <fieldset>
-    <legend>Personal Info</legend>
+    <legend class="legend">Personal Info</legend>
     <p>
         <label for="firstName">First Name:</label>
         <input type="text" 
-         id="firstName" placeholder="Oussama" autocomplete="on" required
-           >
+         id="firstName" placeholder="Your First Name" autocomplete="on" required
+           class="first">
     </p>
     <p>
         <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" placeholder="Benyahia" autocomplete="on" required>
+        <input type="text" id="lastName" placeholder="Your Last Name" autocomplete="on" required  class="first">
     </p>
 
     <p>
         <label for="age">Age:</label>
-        <input type="number"  id="age" min="18" max="100" step="1" value="20">
+        <input type="number"  id="age" min="18" max="100" step="1" value="20" class="first">
     </p>
     <label for="gendre">Gendre:</label>
-                    <input type="text" name="gendre" id="gendre" list="gendre-list">
+                    <input type="text" name="gendre" id="gendre" list="gendre-list"  class="first">
                     <datalist id="gendre-list">
                         <option value="Male &#x2642">
                         <option value="Female &#x2640">
@@ -46,24 +46,24 @@
    
     <p>
     <label for="height">Height:</label>
-    <input type="number" id="height" placeholder="Put your height in cm" autocomplete="on" required>
+    <input type="number" id="height" placeholder="Put your height in cm" autocomplete="on" required  class="first">
 </p>
     <p>
     <label for="weight">Weight:</label>
-    <input type="number" id="weight" placeholder="Put your weight in Kg" autocomplete="on" required>
+    <input type="number" id="weight" placeholder="Put your weight in Kg" autocomplete="on" required  class="first">
 </p>
 <fieldset class="fieldintofield">
-<legend>Activity level?</legend>
+<legend class="legend">Activity level?</legend>
 <p class="radio">
-    <input type="radio" name="activity" id="Sedentary" value="Sedentary">
+    <input type="radio" name="activity" id="Sedentary" value="Sedentary"  class="second" >
     <label for="Sedentary">Little to no exercise or physical activity in a typical day</label>
 </p>
 <p class="radio">
-    <input type="radio" name="activity" id="LightlyActive" value="LightlyActive">
+    <input type="radio" name="activity" id="LightlyActive" value="LightlyActive" class="second" >
     <label for="LightlyActive">Light exercise or physical activity 1-3 days a week</label>
 </p>
 <p class="radio">
-    <input type="radio" name="activity" id="Active" value="Active">
+    <input type="radio" name="activity" id="Active" value="Active" class="second" >
     <label for="Active">Hard exercise or physical activity 6-7 days a week</label>
 </p>
 
@@ -71,18 +71,25 @@
 </fieldset>
 
 </fieldset>
-
-
-<button type="submit" id="submit">Submit</button>
-<button type="reset" >Reset</button>
+<div class="button-container">
+<button class ='btn' type="submit" id="submit">Submit</button>
+<button class ='btn' type="reset" >Reset</button>
+<button class ='btn' type="button" id="btn" >Save</button>
+<button class ='btn' type="button" id="clear" >Clear History</button>
+</div>
 </form>
 <hr>
 <p id="add"></p>
 <hr>
+<h2>Results History </h2>
+<p id="previous"> No History yet</p>
+<hr>
 <a href="#">Back to Top</a>
 <p id="name">
+  
   &lt;&lt;&lt; &copy; Oussama BENYAHIA &gt;&gt;&gt;
 </p>
   <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
+<span></span>

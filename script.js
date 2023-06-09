@@ -1,6 +1,7 @@
-
+var data =[];
 $('#submit').click(function(e) {
-    e.preventDefault();
+ 
+   
     var msg = $("<p id='add'> </p>");
     var weight = $('#weight').val();
     var height = $('#height').val();
@@ -10,10 +11,10 @@ $('#submit').click(function(e) {
     var gendre = $('#gendre').val();
     var container = $('#add');
     var result = '';
-  
+    if(weight!==''&& height!==''&& age!==''&& gendre!==''&& weight!==''&& activity!==''&& $('#firstName').val()!==''&& $('#lastName').val()!=='' ){
+    e.preventDefault();
+    container.empty();
     result += $('#firstName').val() + ' ' + $('#lastName').val() + ' your answers shows that you have a: ';
-    console.log(weight, height, age, bmi, activity);
-  
     if (bmi < 18.5) {
       result += 'Insuffisance pondérale (maigreur)';
     } else if (bmi >= 18.5 && bmi < 25) {
@@ -49,8 +50,38 @@ $('#submit').click(function(e) {
     } else {
       result += 'You need to input your weight and height correctly';
     }
-  
+    data.push(result);
     msg.append(result);
-    container.append(msg);
-    console.log(result);
+    container.append(msg);} 
+    else alert("Sorry,you need to complete all inputs")
   });
+  var container = $('#previous');
+  var msg = $("<p id='previous'></p>");
+  var stringifiedData=''
+  var previousResult=[];
+  if(JSON.parse(window.localStorage.getItem("data")!== null)){
+  previousResult=JSON.parse(window.localStorage.getItem("data"))}
+  if(previousResult.length>0){
+  msg=$('#previous').html(previousResult.join('<br>'));
+  container.append(msg);}
+  $('#btn').click(function() {
+    if (data.length===0){
+        alert("Sorry,nothing to save");}
+    else if(data.length>0 && previousResult.length===0){
+     stringifiedData = JSON.stringify(data);
+    window.localStorage.setItem("data", stringifiedData);
+     previousResult = JSON.parse(window.localStorage.getItem("data"));
+      msg=$('#previous').html(previousResult.join('<br>'));
+      container.append(msg);}
+    else if(data.length>0 && previousResult.length>0){
+     stringifiedData = JSON.stringify(previousResult.concat(data));
+    window.localStorage.setItem("data", stringifiedData);
+     previousResult = JSON.parse(window.localStorage.getItem("data"));
+      msg=$('#previous').html(previousResult.join('<br>'));
+      container.append(msg);}
+  });
+  $('#clear').click(function() { 
+    localStorage.removeItem("data");
+    container.empty();
+  data=[];
+  $("#add").empty()})

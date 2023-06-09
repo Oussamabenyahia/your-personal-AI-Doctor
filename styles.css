@@ -1,14 +1,15 @@
 body {
+    color: rgb(87, 81, 194);
     font-family: cursive;
     font-size: larger;
-    background-color: rgb(181, 250, 181);
+    background-color: rgba(255, 255, 255, 0));
 }
 
 h1 {
     text-align: center;
 }
 
-#intro{
+#intro {
     font-size: x-large;
     font-weight: bold;
 }
@@ -19,21 +20,73 @@ fieldset {
     margin-right: 26%;
     padding: revert;
     margin-top: 0px;
-    border: solid 5px;
+    border: solid 5px rgb(1, 1, 33);
     font-size: xx-large;
 }
 
 legend {
     font-weight: bold;
+    color: rgb(172, 166, 166);
+}
+
+label {
+    color: rgb(1, 1, 33)
 }
 
 .fieldintofield {
     margin: auto;
+    border: solid 5px gray;
 }
-.radio{
+
+#legend {
+    color: rgb(1, 1, 33);
+}
+
+.radio {
     font-size: 25px;
 }
-#name{
+
+#name {
     text-align: right;
     color: rgb(118, 5, 5);
 }
+
+.first {
+    border: solid 2px;
+    background-color: white;
+    height: 30px;
+    font-weight: 800;
+    width: -webkit-fill-available;
+}
+.second{ border: solid 2px;
+    background-color: white;
+    height: 30px;
+    font-weight: 800;
+    width: auto;}
+.button-container {
+    display: flex;
+    justify-content: center;
+  }
+.btn {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 228px;
+    height: 50px;
+    font-size: larger;
+margin: 30px;
+    justify-content: center
+    border: solid 5px rgb(1, 1, 33);
+    background-color: white;
+    font-weight: 900;
+}
+
+.btn:hover {
+    opacity: 0.5;
+    font-size: 25px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    #Active{
+        width: auto;
+    }
